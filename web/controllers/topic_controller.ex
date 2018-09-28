@@ -2,6 +2,10 @@ defmodule Discuss.TopicController do
   use Discuss.Web, :controller
   alias Discuss.Topic
 
+  def index(conn, _params) do
+    render conn, "index.html", topics: Repo.all(Topic)
+  end
+
   def new(conn, _params) do
     changeset = Topic.changeset(%Topic{}, %{})
 
