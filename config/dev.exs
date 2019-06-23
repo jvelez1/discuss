@@ -20,7 +20,7 @@ use Mix.Config
 # configured to run both http and https servers on
 # different ports.
 config :discuss, Discuss.Endpoint,
-  http: [port: 4000],
+  http: [port: 4004],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -49,8 +49,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :discuss, Discuss.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "josuevelez",
-  password: "",
+  username: "postgres",
+  password: "postgres",
   database: "discuss_dev",
   hostname: "localhost",
   pool_size: 10
